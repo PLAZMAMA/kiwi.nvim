@@ -18,7 +18,7 @@ M.open_wiki_index = function(name)
   else
     require("kiwi").setup()
   end
-  local wiki_index_path = vim.fs.joinpath(config.path, "index.md")
+  local wiki_index_path = vim.fs.joinpath(config.path, "README.md")
   local buffer_number = vim.fn.bufnr(wiki_index_path, true)
   vim.api.nvim_win_set_buf(0, buffer_number)
   local opts = { noremap = true, silent = true, nowait = true }
